@@ -1532,7 +1532,7 @@ function MobileBottomNav({ screen, setScreen, ui, isAdmin, setProfileOpen }) {
       </div>
     </div>
   );
-}
+}  
 function SupplierCard({
   supplier,
   ui,
