@@ -5201,33 +5201,60 @@ ${inviteMessage || "מחכים לכם לחגוג איתנו!"}`
             onClick={() => setScreen("shop")}
             style={ui.tabButton(ui.accent.secondary, screen === "shop")}
           >
-            חנות
-          </button>
-          <button
-            onClick={() => setScreen("invitationBuilder")}
-            style={ui.tabButton(ui.accent.gold, screen === "invitationBuilder")}
-          >
-            הזמנה
-          </button>
-          {isAdmin && (
-            <button
-              onClick={() => setScreen("admin")}
-              style={ui.tabButton(ui.accent.primary, screen === "admin")}
-            >
-              אדמין!!!
-            </button>
-          )}
-          <button
-            onClick={() => setProfileOpen(true)}
-            style={ui.tabButton(ui.accent.primary, false)}
-          >
-            פרופיל
-          </button>
-        </div>
-      )}
-    </div>
-  );
-}
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gap: 8,
+    rowGap: 10,
+  }}
+>
+  <button
+    onClick={() => setScreen("shop")}
+    style={{
+      ...ui.tabButton(ui.accent.primary, screen === "shop"),
+      minHeight: 50,
+      fontSize: 12,
+    }}
+  >
+    חנות
+  </button>
+
+  <button
+    onClick={() => setScreen("invitationBuilder")}
+    style={{
+      ...ui.tabButton(ui.accent.gold, screen === "invitationBuilder"),
+      minHeight: 50,
+      fontSize: 12,
+    }}
+  >
+    הזמנה
+  </button>
+
+  {isAdmin && (
+    <button
+      onClick={() => setScreen("admin")}
+      style={{
+        ...ui.tabButton(ui.accent.primary, screen === "admin"),
+        minHeight: 50,
+        fontSize: 12,
+      }}
+    >
+      אדמין
+    </button>
+  )}
+
+  <button
+    onClick={() => setProfileOpen(true)}
+    style={{
+      ...ui.tabButton(ui.accent.primary, false),
+      minHeight: 50,
+      fontSize: 12,
+    }}
+  >
+    פרופיל
+  </button>
+</div>
 
 /* =========================
    APP ROOT
