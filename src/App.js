@@ -1515,31 +1515,32 @@ function MobileBottomNav({ screen, setScreen, ui, isAdmin, setProfileOpen }) {
     );
   })}
 
-  <button
-    onClick={() => setProfileOpen(true)}
-    style={{
-      border: "none",
-      borderRadius: 18,
-      padding: "10px 4px",
-      minHeight: 58,
-      minWidth: 0,
-      width: "100%",
-      cursor: "pointer",
-      background: "transparent",
-      color: "white",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      gap: 4,
-      fontFamily: "inherit",
-      boxSizing: "border-box",
-    }}
-  >
-    <span style={{ fontSize: 18 }}>👤</span>
-    <span style={{ fontSize: 11, whiteSpace: "nowrap" }}>פרופיל</span>
-  </button>
-</div>
+        <button
+          onClick={() => setProfileOpen(true)}
+          style={{
+            border: "none",
+            borderRadius: 18,
+            padding: "10px 4px",
+            minHeight: 58,
+            minWidth: 0,
+            width: "100%",
+            cursor: "pointer",
+            background: "transparent",
+            color: "white",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 4,
+            fontFamily: "inherit",
+            boxSizing: "border-box",
+          }}
+        >
+          <span style={{ fontSize: 18 }}>👤</span>
+          <span style={{ fontSize: 11, whiteSpace: "nowrap" }}>פרופיל</span>
+        </button>
+      </div>
+    </div>
   );
 }
 
