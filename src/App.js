@@ -1457,7 +1457,7 @@ function MobileBottomNav({ screen, setScreen, ui, isAdmin, setProfileOpen }) {
         left: 12,
         bottom: 12,
         zIndex: 30,
-        background: "rgba(21, 18, 54, 0.88)",
+        background: "red",
         backdropFilter: "blur(18px)",
         border: `1px solid ${ui.theme.line}`,
         borderRadius: 24,
