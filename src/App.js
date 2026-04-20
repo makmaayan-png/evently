@@ -1540,6 +1540,8 @@ function MobileBottomNav({ screen, setScreen, ui, isAdmin, setProfileOpen }) {
     <span style={{ fontSize: 11, whiteSpace: "nowrap" }}>פרופיל</span>
   </button>
 </div>
+  );
+}
 
 function SupplierCard({
   supplier,
