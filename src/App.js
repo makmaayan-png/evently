@@ -1441,9 +1441,13 @@ function MobileBottomNav({ screen, setScreen, ui, isAdmin, setProfileOpen }) {
     { key: "dashboard", label: "דשבורד", emoji: "🏠" },
     { key: "manage", label: "ניהול", emoji: "🗂️" },
     { key: "shop", label: "חנות", emoji: "🛒" },
-    { key: "suppliers", label: "ספקים", emoji: "🛍️" },
+    { key: "suppliers", label: "ספקים", emoji: "📦" },
     { key: "invitationBuilder", label: "הזמנה", emoji: "💌" },
   ];
+
+  if (isAdmin) {
+    items.push({ key: "admin", label: "אדמין", emoji: "⚙️" });
+  }
 
   return (
     <div
@@ -1455,17 +1459,15 @@ function MobileBottomNav({ screen, setScreen, ui, isAdmin, setProfileOpen }) {
         zIndex: 30,
         background: "rgba(21, 18, 54, 0.88)",
         backdropFilter: "blur(18px)",
-        WebkitBackdropFilter: "blur(18px)",
         border: `1px solid ${ui.theme.line}`,
         borderRadius: 24,
-        padding: 10,
-        boxShadow: "0 16px 40px rgba(0,0,0,0.24)",
+        padding: 12,
       }}
     >
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: `repeat(${items.length + 1}, 1fr)`,
+          gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
           gap: 8,
         }}
       >
@@ -1479,7 +1481,8 @@ function MobileBottomNav({ screen, setScreen, ui, isAdmin, setProfileOpen }) {
               style={{
                 border: "none",
                 borderRadius: 18,
-                padding: "10px 6px",
+                padding: "10px 4px",
+                minHeight: 58,
                 cursor: "pointer",
                 background: isActive
                   ? "linear-gradient(135deg, rgba(255,79,216,0.24) 0%, rgba(73,166,255,0.20) 100%)"
@@ -1488,6 +1491,7 @@ function MobileBottomNav({ screen, setScreen, ui, isAdmin, setProfileOpen }) {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
+                justifyContent: "center",
                 gap: 4,
                 fontFamily: "inherit",
               }}
@@ -1495,8 +1499,9 @@ function MobileBottomNav({ screen, setScreen, ui, isAdmin, setProfileOpen }) {
               <span style={{ fontSize: 18 }}>{item.emoji}</span>
               <span
                 style={{
-                  fontSize: 12,
+                  fontSize: 11,
                   fontWeight: isActive ? "bold" : "normal",
+                  whiteSpace: "nowrap",
                 }}
               >
                 {item.label}
@@ -1510,19 +1515,19 @@ function MobileBottomNav({ screen, setScreen, ui, isAdmin, setProfileOpen }) {
           style={{
             border: "none",
             borderRadius: 18,
-            padding: "10px 6px",
+            padding: "10px 4px",
             cursor: "pointer",
             background: "transparent",
             color: "white",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            justifyContent: "center",
             gap: 4,
-            fontFamily: "inherit",
           }}
         >
           <span style={{ fontSize: 18 }}>👤</span>
-          <span style={{ fontSize: 12 }}>פרופיל</span>
+          <span style={{ fontSize: 11 }}>פרופיל</span>
         </button>
       </div>
     </div>
