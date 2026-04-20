@@ -1446,7 +1446,7 @@ function MobileBottomNav({ screen, setScreen, ui, isAdmin, setProfileOpen }) {
   ];
 
   if (isAdmin) {
-    items.push({ key: "admin", label: "אדמין", emoji: "⚙️" });
+    items.push({ key: "admin", label: "אדמין!!!", emoji: "⚙️" });
   }
 
   return (
