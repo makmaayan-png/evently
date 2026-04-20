@@ -1446,7 +1446,7 @@ function MobileBottomNav({ screen, setScreen, ui, isAdmin, setProfileOpen }) {
   ];
 
   if (isAdmin) {
-    items.push({ key: "admin", label: "אדמין!!!", emoji: "⚙️" });
+    items.push({ key: "admin", label: "אדמין", emoji: "⚙️" });
   }
 
   return (
@@ -5214,7 +5214,7 @@ ${inviteMessage || "מחכים לכם לחגוג איתנו!"}`
               onClick={() => setScreen("admin")}
               style={ui.tabButton(ui.accent.primary, screen === "admin")}
             >
-              אדמין
+              אדמין!!!
             </button>
           )}
           <button
