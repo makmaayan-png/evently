@@ -1463,76 +1463,84 @@ function MobileBottomNav({ screen, setScreen, ui, isAdmin, setProfileOpen }) {
         borderRadius: 24,
         padding: 12,
       }}
-    >
-      <div
+    ><div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+    gap: 8,
+    rowGap: 10,
+    alignItems: "stretch",
+    width: "100%",
+  }}
+>
+  {items.map((item) => {
+    const isActive = screen === item.key;
+
+    return (
+      <button
+        key={item.key}
+        onClick={() => setScreen(item.key)}
         style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-          gap: 8,
+          border: "none",
+          borderRadius: 18,
+          padding: "10px 4px",
+          minHeight: 58,
+          minWidth: 0,
+          width: "100%",
+          cursor: "pointer",
+          background: isActive
+            ? "linear-gradient(135deg, rgba(255,79,216,0.24) 0%, rgba(73,166,255,0.20) 100%)"
+            : "transparent",
+          color: "white",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 4,
+          fontFamily: "inherit",
+          boxSizing: "border-box",
         }}
       >
-        {items.map((item) => {
-          const isActive = screen === item.key;
-
-          return (
-            <button
-              key={item.key}
-              onClick={() => setScreen(item.key)}
-              style={{
-                border: "none",
-                borderRadius: 18,
-                padding: "10px 4px",
-                minHeight: 58,
-                cursor: "pointer",
-                background: isActive
-                  ? "linear-gradient(135deg, rgba(255,79,216,0.24) 0%, rgba(73,166,255,0.20) 100%)"
-                  : "transparent",
-                color: "white",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 4,
-                fontFamily: "inherit",
-              }}
-            >
-              <span style={{ fontSize: 18 }}>{item.emoji}</span>
-              <span
-                style={{
-                  fontSize: 11,
-                  fontWeight: isActive ? "bold" : "normal",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                {item.label}
-              </span>
-            </button>
-          );
-        })}
-
-        <button
-          onClick={() => setProfileOpen(true)}
+        <span style={{ fontSize: 18 }}>{item.emoji}</span>
+        <span
           style={{
-            border: "none",
-            borderRadius: 18,
-            padding: "10px 4px",
-            cursor: "pointer",
-            background: "transparent",
-            color: "white",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: 4,
+            fontSize: 11,
+            fontWeight: isActive ? "bold" : "normal",
+            whiteSpace: "nowrap",
           }}
         >
-          <span style={{ fontSize: 18 }}>👤</span>
-          <span style={{ fontSize: 11 }}>פרופיל</span>
-        </button>
-      </div>
-    </div>
-  );
-}  
+          {item.label}
+        </span>
+      </button>
+    );
+  })}
+
+  <button
+    onClick={() => setProfileOpen(true)}
+    style={{
+      border: "none",
+      borderRadius: 18,
+      padding: "10px 4px",
+      minHeight: 58,
+      minWidth: 0,
+      width: "100%",
+      cursor: "pointer",
+      background: "transparent",
+      color: "white",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 4,
+      fontFamily: "inherit",
+      boxSizing: "border-box",
+    }}
+  >
+    <span style={{ fontSize: 18 }}>👤</span>
+    <span style={{ fontSize: 11, whiteSpace: "nowrap" }}>פרופיל</span>
+  </button>
+</div>
+
 function SupplierCard({
   supplier,
   ui,
