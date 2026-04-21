@@ -5160,6 +5160,7 @@ ${inviteMessage || "מחכים לכם לחגוג איתנו!"}`
           )}
         </div>
       )}
+
 {settings.mobileMode && (
   <div
     style={{
@@ -5173,7 +5174,7 @@ ${inviteMessage || "מחכים לכם לחגוג איתנו!"}`
       borderRadius: 22,
       padding: 8,
       display: "grid",
-      gridTemplateColumns: "repeat(3, 1fr)",
+      gridTemplateColumns: "repeat(2, 1fr)",
       gap: 8,
       rowGap: 10,
       boxShadow: "0 12px 40px rgba(0,0,0,0.18)",
