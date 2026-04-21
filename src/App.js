@@ -2869,111 +2869,116 @@ ${inviteMessage || ""}`;
           />
         </div>
 
-  <div
-  style={{
-    display: "grid",
-    gridTemplateColumns: settings.mobileMode ? "repeat(2, 1fr)" : "repeat(4, 1fr)",
-    gap: 10,
-    marginTop: 20,
-  }}
->
-  <button
-    onClick={() => setScreen("dashboard")}
-    style={{
-      ...ui.tabButton(ui.accent.primary, screen === "dashboard"),
-      minHeight: 52,
-      fontSize: 12,
-      width: "100%",
-    }}
-  >
-    דשבורד
-  </button>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: settings.mobileMode
+              ? "repeat(2, 1fr)"
+              : "repeat(4, 1fr)",
+            gap: 10,
+            marginTop: 20,
+          }}
+        >
+          <button
+            onClick={() => setScreen("dashboard")}
+            style={{
+              ...ui.tabButton(ui.accent.primary, screen === "dashboard"),
+              minHeight: 52,
+              fontSize: 12,
+              width: "100%",
+            }}
+          >
+            דשבורד
+          </button>
 
-  <button
-    onClick={() => setScreen("home")}
-    style={{
-      ...ui.tabButton(ui.accent.tertiary, screen === "home"),
-      minHeight: 52,
-      fontSize: 12,
-      width: "100%",
-    }}
-  >
-    אירועים
-  </button>
+          <button
+            onClick={() => setScreen("home")}
+            style={{
+              ...ui.tabButton(ui.accent.tertiary, screen === "home"),
+              minHeight: 52,
+              fontSize: 12,
+              width: "100%",
+            }}
+          >
+            אירועים
+          </button>
 
-  <button
-    onClick={() => setScreen("event")}
-    style={{
-      ...ui.tabButton(ui.accent.secondary, screen === "event"),
-      minHeight: 52,
-      fontSize: 12,
-      width: "100%",
-    }}
-  >
-    אירוע
-  </button>
+          <button
+            onClick={() => setScreen("event")}
+            style={{
+              ...ui.tabButton(ui.accent.secondary, screen === "event"),
+              minHeight: 52,
+              fontSize: 12,
+              width: "100%",
+            }}
+          >
+            אירוע
+          </button>
 
-  <button
-    onClick={() => setScreen("manage")}
-    style={{
-      ...ui.tabButton(ui.accent.gold, screen === "manage"),
-      minHeight: 52,
-      fontSize: 12,
-      width: "100%",
-    }}
-  >
-    ניהול
-  </button>
+          <button
+            onClick={() => setScreen("manage")}
+            style={{
+              ...ui.tabButton(ui.accent.gold, screen === "manage"),
+              minHeight: 52,
+              fontSize: 12,
+              width: "100%",
+            }}
+          >
+            ניהול
+          </button>
 
-  <button
-    onClick={() => setScreen("suppliers")}
-    style={{
-      ...ui.tabButton(ui.accent.tertiary, screen === "suppliers"),
-      minHeight: 52,
-      fontSize: 12,
-      width: "100%",
-    }}
-  >
-    ספקים
-  </button>
+          <button
+            onClick={() => setScreen("suppliers")}
+            style={{
+              ...ui.tabButton(ui.accent.tertiary, screen === "suppliers"),
+              minHeight: 52,
+              fontSize: 12,
+              width: "100%",
+            }}
+          >
+            ספקים
+          </button>
 
-  <button
-    onClick={() => setScreen("shop")}
-    style={{
-      ...ui.tabButton(ui.accent.primary, screen === "shop"),
-      minHeight: 52,
-      fontSize: 12,
-      width: "100%",
-    }}
-  >
-    חנות
-  </button>
+          <button
+            onClick={() => setScreen("shop")}
+            style={{
+              ...ui.tabButton(ui.accent.primary, screen === "shop"),
+              minHeight: 52,
+              fontSize: 12,
+              width: "100%",
+            }}
+          >
+            חנות
+          </button>
 
-  <button
-    onClick={() => setScreen("favorites")}
-    style={{
-      ...ui.tabButton(ui.accent.primary, screen === "favorites"),
-      minHeight: 52,
-      fontSize: 12,
-      width: "100%",
-    }}
-  >
-    מועדפים
-  </button>
+          <button
+            onClick={() => setScreen("favorites")}
+            style={{
+              ...ui.tabButton(ui.accent.primary, screen === "favorites"),
+              minHeight: 52,
+              fontSize: 12,
+              width: "100%",
+            }}
+          >
+            מועדפים
+          </button>
 
-  <button
-    onClick={() => setScreen("invitationBuilder")}
-    style={{
-      ...ui.tabButton(ui.accent.secondary, screen === "invitationBuilder"),
-      minHeight: 52,
-      fontSize: 12,
-      width: "100%",
-    }}
-  >
-    הזמנה
-  </button>
-</div>
-</div>
+          <button
+            onClick={() => setScreen("invitationBuilder")}
+            style={{
+              ...ui.tabButton(
+                ui.accent.secondary,
+                screen === "invitationBuilder"
+              ),
+              minHeight: 52,
+              fontSize: 12,
+              width: "100%",
+            }}
+          >
+            הזמנה
+          </button>
+        </div>
+      </div>
 
       {saving && (
         <div style={{ ...ui.card, padding: 12 }}>
