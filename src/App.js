@@ -2973,6 +2973,7 @@ ${inviteMessage || ""}`;
     הזמנה
   </button>
 </div>
+</div>
 
       {saving && (
         <div style={{ ...ui.card, padding: 12 }}>
